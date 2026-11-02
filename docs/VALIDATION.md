@@ -56,4 +56,13 @@ Responsive styles are included, but this record does not claim exhaustive mobile
 
 No independent clinician validation, prospective clinical evaluation, regulatory clearance, institutional deployment, EHR integration, or performance claim is made. Test fixtures and implementation share the same source interpretation; coverage does not prove clinical correctness. Review the pinned source and the protocol before any clinical use, which is outside this prototype's intended scope.
 
-GitHub Actions provides the public build/test history under the repository's **Actions** tab.
+## Published verification
+
+The application was published from commit `35b0c3a322a6e378b46d1c47a04769536c36cdba` and checked at the [live demo](https://ysm19990103.github.io/oncology-toxicity-workbench/).
+
+- [Tests and privacy checks — successful](https://github.com/ysm19990103/oncology-toxicity-workbench/actions/runs/41425029217)
+- [Build and Pages deployment — successful](https://github.com/ysm19990103/oncology-toxicity-workbench/actions/runs/41425029227)
+- Live interaction confirmed that changing ANC from 0.3 to 0.5 ×10⁹/L updates the displayed result from G3 to G2. The demo was then restored to its initial synthetic case.
+- The README screenshot was captured from the deployed application. The subsequent evidence commit updates documentation and the screenshot only.
+
+Future runs are available under the repository's **Actions** tab.
