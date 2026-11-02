@@ -4,7 +4,7 @@ Software version: **1.0.0**. Clinical source: **CTCAE v6.0, 2025-07-22**. Verifi
 
 ## Automated verification
 
-`npm test`: **223 tests passed, 0 failed**.
+`npm test`: **225 tests passed, 0 failed**.
 
 Coverage from `npm run coverage`:
 
@@ -58,11 +58,11 @@ No independent clinician validation, prospective clinical evaluation, regulatory
 
 ## Published verification
 
-The application was published from commit `35b0c3a322a6e378b46d1c47a04769536c36cdba` and checked at the [live demo](https://ysm19990103.github.io/oncology-toxicity-workbench/).
+The first application deployment was published from commit `35b0c3a322a6e378b46d1c47a04769536c36cdba` and checked at the [live demo](https://ysm19990103.github.io/oncology-toxicity-workbench/).
 
 - [Tests and privacy checks — successful](https://github.com/ysm19990103/oncology-toxicity-workbench/actions/runs/41425029217)
 - [Build and Pages deployment — successful](https://github.com/ysm19990103/oncology-toxicity-workbench/actions/runs/41425029227)
 - Live interaction confirmed that changing ANC from 0.3 to 0.5 ×10⁹/L updates the displayed result from G3 to G2. The demo was then restored to its initial synthetic case.
-- The README screenshot was captured from the deployed application. The subsequent evidence commit updates documentation and the screenshot only.
+- The README screenshot was captured from the deployed application. The subsequent evidence commit updates documentation and the screenshot only. A final conversion fix removes precision rounding before unit changes; the two additional regression tests bring the suite to 225. The latest Actions runs cover that final source.
 
 Future runs are available under the repository's **Actions** tab.

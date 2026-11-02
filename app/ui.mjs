@@ -1,6 +1,7 @@
 import { EVENTS, EVENT_IDS, DIARY_SYMPTOMS, STANDARD, ENGINE_VERSION, SOURCE_INDEX, PRO_SOURCE, choose, pair, emptyInputs, sourceLink } from './rules.mjs';
 import { assess, blankObservation, blankCase, importCase, exportJSON, exportCSV, exportDiaryCSV, timeline, MAX_OBSERVATIONS, MAX_DIARY, MAX_IMPORT_BYTES } from './engine.mjs';
 import { EXAMPLES, loadExample } from './examples.mjs';
+import { convertUnitValue } from './units.mjs';
 
 let data=loadExample('nadir');
 let selected=EXAMPLES.nadir.selected;
@@ -212,8 +213,7 @@ function updateInput(target) {
     const old=o.inputs[key];
     o.inputs[key]=target.value===''?null:f.type==='number'?Number(target.value):f.type==='flag'?target.value==='true':target.value;
     if(key==='unit'&&old&&o.inputs.unit&&old!==o.inputs.unit) {
-      const factor=o.event==='anc'?(o.inputs.unit==='cells/uL'?1000:0.001):(o.inputs.unit==='g/L'?10:0.1);
-      for(const k of ['value','lln'])if(typeof o.inputs[k]==='number')o.inputs[k]=Number((o.inputs[k]*factor).toPrecision(12));
+      for(const k of ['value','lln'])if(typeof o.inputs[k]==='number')o.inputs[k]=convertUnitValue(o.inputs[k],old,o.inputs.unit);
       $('#editor').innerHTML=editorMarkup();
     }
     changed();updateResults();

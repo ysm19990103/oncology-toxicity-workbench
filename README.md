@@ -63,7 +63,7 @@ The build copies the self-contained application into `dist/`. GitHub Actions run
 | Browser safety | Strict schema, bounded file size/counts, escaped rendering, inert spreadsheet exports, CSP and no external scripts |
 | Maintainability | Pure grading engine separated from interface, examples and rule metadata; zero package dependency chain |
 
-The automated suite has **223 passing tests**. Engine-only instrumentation reports **100% line coverage and 99.23% branch coverage**. These are software checks, not independent clinical validation. See [validation evidence and limits](docs/VALIDATION.md).
+The automated suite has **225 passing tests**. Engine-only instrumentation reports **100% line coverage and 99.23% branch coverage**. These are software checks, not independent clinical validation. See [validation evidence and limits](docs/VALIDATION.md).
 
 ## Data and privacy
 

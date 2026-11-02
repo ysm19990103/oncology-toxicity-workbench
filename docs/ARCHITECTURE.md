@@ -9,6 +9,7 @@ The application is a dependency-free static site. It has no server-side applicat
 | `app/rules.mjs` | Event metadata, typed field descriptions, source pages, bilingual explanatory text, version constants |
 | `app/engine.mjs` | Pure assessment, strict validation, case serialization, CSV exports, sorted timelines |
 | `app/examples.mjs` | Four fully fabricated teaching cases |
+| `app/units.mjs` | Decimal-exponent unit conversions preserving significant input digits |
 | `app/ui.mjs` | In-memory state, forms, chart, timeline, diary, downloads and printable report |
 | `app/sw.js` | Cache only a fixed list of static application assets; network-first loading with offline fallback |
 | `scripts/serve.mjs` | Local static development server with path traversal protection |

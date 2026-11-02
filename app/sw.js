@@ -1,5 +1,5 @@
-const CACHE='oncology-toxicity-v1.0.0';
-const ASSETS=['./','./index.html','./styles.css','./ui.mjs','./engine.mjs','./rules.mjs','./examples.mjs','./icon.svg','./manifest.webmanifest'];
+const CACHE='oncology-toxicity-v1.0.0-2';
+const ASSETS=['./','./index.html','./styles.css','./ui.mjs','./engine.mjs','./rules.mjs','./units.mjs','./examples.mjs','./icon.svg','./manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('oncology-toxicity-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
