@@ -64,6 +64,8 @@ Rendered strings are escaped. The content security policy permits local scripts/
 
 The code-level scan is a heuristic, not a general privacy classifier. Numeric clinical data may still be sensitive, and a valid schema does not imply de-identification. The intended use is synthetic education.
 
+Static asset installation bypasses the browser HTTP cache. Online fetches revalidate cached HTTP responses, and a fully installed worker activates immediately without reloading the page or clearing the in-memory case. This prevents a previously cached entry module from hiding a deployed fix. Offline requests fall back to the fixed asset cache; no case values enter it.
+
 ## Deployment
 
 `npm run build` copies `app/` to `dist/`. `.github/workflows/ci.yml` checks syntax/privacy heuristics and runs tests. `.github/workflows/pages.yml` checks, tests and builds before uploading a Pages artifact. Only the deployment job gets Pages-write and OIDC permissions; checkout does not persist credentials.
