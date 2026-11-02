@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#163d36">
+  <meta name="description" content="Explore selected CTCAE v6.0 criteria with traceable grading, synthetic teaching cases, and a separate symptom diary. All case processing stays in your browser.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Oncology Toxicity Workbench</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./ui.mjs"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div id="app"></div>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <div id="print-report"></div>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <noscript>This educational workbench needs JavaScript. Use synthetic cases only.</noscript>
+</body>
+</html>

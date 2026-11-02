@@ -1,0 +1,16 @@
+{
+  "name": "oncology-toxicity-workbench",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A local-first educational CTCAE v6.0 workbench with traceable rules and synthetic cases.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "coverage": "node --test --experimental-test-coverage tests/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "license": "MIT"
+}
